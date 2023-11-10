@@ -23,6 +23,6 @@ public abstract class Person {
 		return annualIncome;
 	}
 	
-	public abstract Double Tax(Double annualIncome, Double healthSpending);
+	public abstract Double tax(Double annualIncome);
 
 }

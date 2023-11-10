@@ -18,11 +18,11 @@ public final class LegalPerson extends Person {
 	}
 
 	@Override
-	public Double Tax(Double annualIncome, Double healthSpending) {
-		if(annualIncome < 20000.00) {
-			return (annualIncome + annualIncome * 0.15) - (healthSpending/2);
+	public Double tax(Double annualIncome) {
+		if(numberOfEmployees <= 10) {
+			return annualIncome + annualIncome * 0.16;
 		} else {
-			return (annualIncome + annualIncome * 0.25) - (healthSpending/2);
+			return annualIncome + annualIncome * 0.14;
 		}
 	}
 
