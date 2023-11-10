@@ -18,7 +18,7 @@ public final class LegalPerson extends Person {
 	}
 
 	@Override
-	public Double tax(Double annualIncome) {
+	public Double tax() {
 		if(numberOfEmployees <= 10) {
 			return annualIncome + annualIncome * 0.16;
 		} else {
