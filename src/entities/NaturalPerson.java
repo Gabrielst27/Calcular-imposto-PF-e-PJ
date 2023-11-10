@@ -1,5 +1,5 @@
 package entities;
 
-public class NaturalPerson {
+public final class NaturalPerson extends Person {
 
 }

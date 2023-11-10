@@ -1,5 +1,5 @@
 package entities;
 
-public class Person {
+public abstract class Person {
 
 }
