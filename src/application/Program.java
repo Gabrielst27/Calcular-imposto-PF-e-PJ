@@ -43,13 +43,13 @@ public class Program {
 		}
 		
 		double totalTaxes = 0;
-		System.out.println("TAXES PAID:");
+		System.out.printf("\nTAXES PAID:\n");
 		for(Person p : payers) {
 			System.out.println(p);
-			totalTaxes += p.tax();
+			totalTaxes += (double)p.tax();
 		}
 		
-		System.out.println("TOTAL TAXES: %.2f" + totalTaxes);
+		System.out.println("\nTOTAL TAXES: $ " + String.format("%.2f", totalTaxes));
 		
 		sc.close();
 

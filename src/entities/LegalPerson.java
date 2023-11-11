@@ -20,10 +20,15 @@ public final class LegalPerson extends Person {
 	@Override
 	public Double tax() {
 		if(numberOfEmployees <= 10) {
-			return annualIncome + annualIncome * 0.16;
+			return annualIncome * 0.16;
 		} else {
-			return annualIncome + annualIncome * 0.14;
+			return annualIncome * 0.14;
 		}
+	}
+	
+	@Override
+	public String toString() {
+		return name + ": $ " + String.format("%.2f", tax());
 	}
 
 }

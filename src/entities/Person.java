@@ -24,5 +24,7 @@ public abstract class Person {
 	}
 	
 	public abstract Double tax();
+	
+	public abstract String toString();
 
 }

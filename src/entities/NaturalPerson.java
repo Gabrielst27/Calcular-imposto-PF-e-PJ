@@ -20,10 +20,15 @@ public final class NaturalPerson extends Person {
 	@Override
 	public Double tax() {
 		if(annualIncome < 20000.00) {
-			return (annualIncome + annualIncome * 0.15) - (healthSpending / 2);
+			return (annualIncome * 0.15) - (healthSpending / 2);
 		} else {
-			return (annualIncome + annualIncome * 0.25) - (healthSpending / 2);
+			return (annualIncome * 0.25) - (healthSpending / 2);
 		}
+	}
+	
+	@Override
+	public String toString() {
+		return name + ": $ " + String.format("%.2f", tax());
 	}
 
 }
