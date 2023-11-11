@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
+import entities.LegalPerson;
 import entities.NaturalPerson;
 import entities.Person;
 
@@ -33,10 +34,22 @@ public class Program {
 			if(type.toUpperCase().equals("I")) {
 				System.out.print("Health expendictures: ");
 				double healthSpending = sc.nextDouble();
-				
 				payers.add(new NaturalPerson(name, annualIncome, healthSpending));
+			} else if (type.toUpperCase().equals("C")) {
+				System.out.print("Number of employees: ");
+				int numberOfEmployees = sc.nextInt();
+				payers.add(new LegalPerson(name, annualIncome, numberOfEmployees));
 			}
 		}
+		
+		double totalTaxes = 0;
+		System.out.println("TAXES PAID:");
+		for(Person p : payers) {
+			System.out.println(p);
+			totalTaxes += p.tax();
+		}
+		
+		System.out.println("TOTAL TAXES: %.2f" + totalTaxes);
 		
 		sc.close();
 
